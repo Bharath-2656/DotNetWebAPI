@@ -12,14 +12,14 @@ namespace FirstWebApplication.Controllers
         {
             _context = context;
         }
-
+        //Get all users
         [HttpGet]
         [Route("User/GetAllUsers")]
         public List<User> GetAllUsers()
         {
             return _context.Users.ToList();
         }
-
+        //Get user name by id
         [Route("User/GetName")]
         public string GetName(int Id)
         {
